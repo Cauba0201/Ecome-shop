@@ -8,7 +8,7 @@ import { FaRegEnvelope } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa6";
 
 const HeaderTop = () => {
-  const { data: session }: any = useSession();
+  //const { data: session }: any = useSession();
 
   const handleSignOut = async () => {
     setTimeout(() => signOut(), 1000);
@@ -29,7 +29,7 @@ const HeaderTop = () => {
           </li>
         </ul>
         <ul className="flex items-center h-full gap-x-5 max-[370px]:text-sm max-[370px]:gap-x-2">
-          {session ? (
+          {/* {session ? ( */}
             <>
               <li className="flex items-center">
                 <Link
@@ -50,9 +50,9 @@ const HeaderTop = () => {
                 </Link>
               </li>
             </>
-          ) : (
+          {/* ) : ( */}
             <>
-              <span>{session.user?.name}</span>
+              {/* <span>{session.user?.name}</span> */}
               <li className="flex items-center">
                 <button
                   onClick={handleSignOut}
@@ -60,10 +60,10 @@ const HeaderTop = () => {
                 >
                   <FaRegUser className="text-white" />
                   <span>Logout</span>
-                </button>
+                </button> 
               </li>
             </>
-          )}
+          {/* )} */}
         </ul>
       </div>
     </div>
