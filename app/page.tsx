@@ -1,3 +1,4 @@
+import CategoryMenu from "@/components/CategoryMenu";
 import Hero from "@/components/Hero";
 import IntroducingSection from "@/components/IntroducingSection";
 
@@ -6,6 +7,7 @@ export default function Home() {
     <>
       <Hero />
       <IntroducingSection />
+      <CategoryMenu />
     </>
   );
 }
