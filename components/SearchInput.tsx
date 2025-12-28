@@ -3,6 +3,7 @@
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
 import { sanitize } from "@/lib/sanitize";
+import { CiSearch } from "react-icons/ci";
 
 const SearchInput = () => {
   const [searchInput, setSearchInput] = useState("");

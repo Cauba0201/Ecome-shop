@@ -8,7 +8,7 @@ const HeartElement = () => {
   return (
     <div className="relative">
       <Link href="/wishlist">
-        <FaHeart className="text-2xl text-black" />
+        <FaHeart className="text-2xl text-[#fff]" />
       </Link>
     </div>
   );

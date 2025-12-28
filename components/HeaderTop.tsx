@@ -6,6 +6,11 @@ import toast from "react-hot-toast";
 import { FaHeadphones } from "react-icons/fa6";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { FaRegUser } from "react-icons/fa6";
+import SearchInput from "./SearchInput";
+import HeartElement from "./HeartElement";
+import CartElement from "./CartElement";
+import Image from "next/image";
+import { IoMenu } from "react-icons/io5";
 
 const HeaderTop = () => {
   //const { data: session }: any = useSession();
@@ -16,53 +21,60 @@ const HeaderTop = () => {
   };
 
   return (
-    <div className="h-10 text-white bg-blue-500 max-lg:px-5 max-lg:h-16 max-[573px]:px-0">
+    <div className="h-10 text-[#fff] bg-[#000] max-lg:px-5 max-lg:h-16 max-[573px]:px-0">
       <div className="flex justify-between h-full max-lg:flex-col max-lg:justify-center max-lg:items-center max-w-screen-2xl mx-auto px-12 max-[573px]:px-0">
         <ul className="flex items-center h-full gap-x-5 max-[370px]:text-sm max-[370px]:gap-x-2">
           <li className="flex items-center gap-x-2 font-semibold">
-            <FaHeadphones className="text-white" />
-            <span>+84 12345678</span>
+            <IoMenu className="text-white" />
+            <span>Menu</span>
           </li>
+          {/* <li className="flex items-center gap-x-2 font-semibold">
+            <SearchInput />
+          </li> */}
+        </ul>
+        <ul className="flex items-center h-full gap-x-5 max-[370px]:text-sm max-[370px]:gap-x-2">
           <li className="flex items-center gap-x-2 font-semibold">
-            <FaRegEnvelope className="text-white text-xl" />
-            <span>nguyenvanan@gmail.com</span>
+            <Link href="/">
+              <Image
+                src="/logo v1.png"
+                width={130}
+                height={130}
+                alt="singitronic logo"
+                className="w-56 h-auto"
+              />
+            </Link>
           </li>
         </ul>
         <ul className="flex items-center h-full gap-x-5 max-[370px]:text-sm max-[370px]:gap-x-2">
           {/* {session ? ( */}
-            <>
-              <li className="flex items-center">
-                <Link
-                  href="/login"
-                  className="flex items-center gap-x-2 font-semibold"
-                >
-                  <FaRegUser className="text-white" />
-                  <span>Login</span>
-                </Link>
-              </li>
-              <li className="flex items-center">
-                <Link
-                  href="/register"
-                  className="flex items-center gap-x-2 font-semibold"
-                >
-                  <FaRegUser className="text-white" />
-                  <span>Register</span>
-                </Link>
-              </li>
-            </>
+          <>
+            <li className="flex items-center ">
+              <Link
+                href="/login"
+                className="flex items-center gap-x-2 font-semibold"
+              >
+                <FaRegUser className="text-[#fff]" />
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link
+                href="/favorite"
+                className="flex items-center gap-x-2 font-semibold"
+              >
+                <HeartElement />
+              </Link>
+            </li>
+            <li className="flex items-center">
+              <Link
+                href="/cart"
+                className="flex items-center gap-x-2 font-semibold"
+              >
+                <CartElement />
+              </Link>
+            </li>
+          </>
           {/* ) : ( */}
-            <>
-              {/* <span>{session.user?.name}</span> */}
-              <li className="flex items-center">
-                <button
-                  onClick={handleSignOut}
-                  className="flex items-center gap-x-2 font-semibold"
-                >
-                  <FaRegUser className="text-white" />
-                  <span>Logout</span>
-                </button> 
-              </li>
-            </>
+
           {/* )} */}
         </ul>
       </div>

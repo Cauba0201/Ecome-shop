@@ -23,3 +23,13 @@
       ),
       linear-gradient(-45deg, white 50%, #3B82F6 50.99%);
 }
+
+footer {
+    /* width: 100%; */
+    /* position: absolute; */
+    bottom: 0;
+    /* background: #000; */
+    color: #fff;
+    padding: 50px 20px;
+}
+
